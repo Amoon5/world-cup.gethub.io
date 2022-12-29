@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Poppins:wght@100&display=swap"
+        rel="stylesheet">
+
+
+
+    <style>
+        body {
+            font-family: 'almarai' sans-serif;
+        }
+
+        .bg-primary {
+            background: #811538 !important;
+            color: white;
+        }
+
+        .bg-secondary {
+            background: hsl(341, 100%, 16%) !important;
+            color: white;
+        }
+
+        #header {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 83%);
+            border-bottom: 20px solid #5b0d2481;
+        }
+
+        #background-header {
+            background-image: url(pattern.png);
+            background-repeat: repeat;
+        }
+
+        #logo-header {
+            z-index: 999;
+            position: absolute;
+            left: 100px;
+            top: 60px;
+        }
+
+        #logo-image {
+            height: 300px;
+            -webkit-filter: drop-shadow(5px 5px 35px #222);
+            filter: drop-shadow(5px 5px 35px #222);
+        }
+
+        .logo::after {
+            content: '';
+            width: fit-content;
+            height: fit-content;
+            box-shadow: 0px 10px 0px rgba(144, 189, 9, 0.553);
+        }
+
+        footer {
+            background-image: url(Footer.png);
+            background-position: bottom;
+            width: 100%;
+            height: max-content;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul li {
+            display: inline-block;
+            color: rgb(0, 0, 0);
+            margin: 50px 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            background-color: rgba(166, 8, 240, 0.448);
+        }
+
+        .down {
+            display: inline;
+            margin: auto 26%;
+        }
+
+
+
+
+
+
+        /*table {
+            border: none;
+            background-color: white;
+
+        }*/
+    </style>
+</head>
+
+<body>
+    <div id="logo-header"><img class="logo" id="logo-image" src="logo.png" alt="logo">
+    </div>
+    <!--Header start here-->
+    <div id="header" style="height: 20rem;" class="bg-primary">
+
+        <div id="background-header" style="height: 100%; width: 100%"></div>
+
+        <div style="direction: rtl; color: white; margin: -270px 50px;">
+            <h1 style="font-size: 60px; font-weight: 800px">كأس</h1>
+            <h1 style="font-size: 65px; font-weight: 800px">العالم</h1>
+        </div>
+    </div>
+    <!--Header ends Here-->
+
+    <div class="d-flex justify-content-center">
+        <img src="qatar-word.png" alt="Qatar" style="width: 700px; margin: 30px;">
+    </div>
+
+    <!--Content starts Here-->
+
+    <div class="container" style="margin-top: 40px;">
+        <!--standings-->
+        <div class="p-5 nt-1">
+
+            <!--Title-->
+            <div class="row" style="direction: rtl;">
+                <h1>
+                    <b>
+                        المجموعات
+                    </b>
+                </h1>
+                <hr>
+            </div>
+        </div>
+        <!--Title-->
+
+        <!-- End standings-->
+
+        <!--standings ROW-->
+        <div class="row" id="standings">
+            <!--standings col-->
+            <div class="col-sm-6 mb-4">
+                <div class="card shadow border: none;">
+                    <div class="card-header bg-primary" style="text-align: center;">
+                        <b>Group_A</b>
+                    </div>
+
+                    <div class="row m-0 bg-secondary">
+                        <div class="col-sm-4" style="text-align: center;">
+                            team
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            W
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            L
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            D
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            Pts
+                        </div>
+                    </div>
+                    <!--Ul Teams-->
+                    <ul>
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center; margin-bottom: 20px">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/1349799710/photo/flag-of-netherlands.jpg?b=1&s=170667a&w=0&k=20&c=ZBTuF_THBMHdZe5AWN-LTelxiRyx6HpqKguXpSXGH_A="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>NET</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>7</b>
+                                </div>
+
+
+                                <br>
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center; margin-top: 5px">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2013/07/13/14/17/senegal-162414__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>SEG</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>6</b>
+                                </div>
+                            </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/10/23/23/ecuador-26986__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>ECU</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2013/07/13/14/16/qatar-162396__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>QAT</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>0</b>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--standings ROW ends-->
+
+
+
+            <!--standings col-->
+            <div class="col-sm-6 mb-5">
+                <div class="card shadow border: none;">
+                    <div class="card-header bg-primary" style="text-align: center;">
+                        <b>Group_B</b>
+                    </div>
+
+                    <div class="row m-0 bg-secondary">
+                        <div class="col-sm-4" style="text-align: center;">
+                            team
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            W
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            L
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            D
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            Pts
+                        </div>
+                    </div>
+                    <!--Ul Teams-->
+                    <ul>
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center; margin-bottom: 20px">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2015/11/12/16/23/flag-1040592__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>ENG</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>7</b>
+                                </div>
+
+
+                                <br>
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2017/02/06/15/09/american-flag-2043285__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>USA</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>5</b>
+                                </div>
+                            </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/10/23/03/iran-26826__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>IRA</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>3</b>
+                                </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/182812176/photo/welsh-flag.jpg?b=1&s=170667a&w=0&k=20&c=zBG6NgBg9Qnx-jX6FNxBDUUgRP5fSskoNzZRZDDSe9s="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>WEZ</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>1</b>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--standings ROW ends-->
+
+            <!--standings col-->
+            <div class="col-sm-6 mb-5">
+                <div class="card shadow border: none;">
+                    <div class="card-header bg-primary" style="text-align: center;">
+                        <b>Group_C</b>
+                    </div>
+
+                    <div class="row m-0 bg-secondary">
+                        <div class="col-sm-4" style="text-align: center;">
+                            team
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            W
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            L
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            D
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            Pts
+                        </div>
+                    </div>
+                    <!--Ul Teams-->
+                    <ul>
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center; margin-bottom: 20px">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/610426496/photo/flag-of-argentina.jpg?b=1&s=170667a&w=0&k=20&c=TQbZqCvjsS959SjPNajj3iucqlH0uTwWXUGQLghIe7k="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>ARG</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>6</b>
+                                </div>
+
+
+                                <br>
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/10/16/15/poland-26125__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>POL</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+                            </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/652754094/photo/national-flag-of-mexico.jpg?b=1&s=170667a&w=0&k=20&c=Hm6hesOU0q2Za_pEOBJYW5jQNDQCN0dpEP-T1umS4Ns="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>MEX</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2016/01/20/09/10/saudi-arabia-1151148__340.jpg"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>KSA</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>3</b>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--standings ROW ends-->
+
+            <!--standings col-->
+            <div class="col-sm-6 mb-5">
+                <div class="card shadow border: none;">
+                    <div class="card-header bg-primary" style="text-align: center;">
+                        <b>Group_D</b>
+                    </div>
+
+                    <div class="row m-0 bg-secondary">
+                        <div class="col-sm-4" style="text-align: center;">
+                            team
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            W
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            L
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            D
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            Pts
+                        </div>
+                    </div>
+                    <!--Ul Teams-->
+                    <ul>
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center; margin-bottom: 20px">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/11/15/19/france-28463__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>FRA</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>6</b>
+                                </div>
+
+
+                                <br>
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2013/07/12/18/42/australia-153732__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>AUS</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>6</b>
+                                </div>
+                            </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/471568947/pl/zdj%C4%99cie/tunezja.jpg?b=1&s=170667a&w=0&k=20&c=fDV7ArCgR9CzsfkcBC2PORV7SA36XDTl6Ggw8e443cE="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>TUN</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2016/07/23/13/57/danmark-1536909__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>DAN</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>1</b>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--standings ROW ends-->
+
+            <!--standings col-->
+            <div class="col-sm-6 mb-5">
+                <div class="card shadow border: none;">
+                    <div class="card-header bg-primary" style="text-align: center;">
+                        <b>Group_E</b>
+                    </div>
+
+                    <div class="row m-0 bg-secondary">
+                        <div class="col-sm-4" style="text-align: center;">
+                            team
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            W
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            L
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            D
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            Pts
+                        </div>
+                    </div>
+                    <!--Ul Teams-->
+                    <ul>
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center; margin-bottom: 20px">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/13/12/23/flag-32177__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>JAP</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>6</b>
+                                </div>
+
+
+                                <br>
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/11/15/33/spain-28530__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>SPA</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+                            </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/12/23/52/germany-31017__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>GER</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/652473764/it/foto/bandiera-del-costa-rica.jpg?b=1&s=170667a&w=0&k=20&c=xzmJl_jWnrFxKTuF41Be5uVoEMlViHONrCoCjRKExRc="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>COS</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>3</b>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--standings ROW ends-->
+
+
+
+            <!--standings col-->
+            <div class="col-sm-6 mb-5">
+                <div class="card shadow border: none;">
+                    <div class="card-header bg-primary" style="text-align: center;">
+                        <b>Group_F</b>
+                    </div>
+
+                    <div class="row m-0 bg-secondary">
+                        <div class="col-sm-4" style="text-align: center;">
+                            team
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            W
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            L
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            D
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            Pts
+                        </div>
+                    </div>
+                    <!--Ul Teams-->
+                    <ul>
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center; margin-bottom: 20px">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2013/07/13/14/16/morocco-162365__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>MAR</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>7</b>
+                                </div>
+
+
+                                <br>
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/455219859/photo/croatian-flag.jpg?b=1&s=170667a&w=0&k=20&c=y_sPPDuM1OLHVT9SRDIOccK_5RnkvIY7U3R2HVEv-yA="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>CRO</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>5</b>
+                                </div>
+                            </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2013/07/13/14/14/belgium-162240__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>BEL</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/10/23/27/canada-27003__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>CAN</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    3
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>0</b>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--standings ROW ends-->
+
+
+            <!--standings col-->
+            <div class="col-sm-6 mb-5">
+                <div class="card shadow border: none;">
+                    <div class="card-header bg-primary" style="text-align: center;">
+                        <b>Group_G</b>
+                    </div>
+
+                    <div class="row m-0 bg-secondary">
+                        <div class="col-sm-4" style="text-align: center;">
+                            team
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            W
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            L
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            D
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            Pts
+                        </div>
+                    </div>
+                    <!--Ul Teams-->
+                    <ul>
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center; margin-bottom: 20px">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2014/04/02/11/12/brazil-305531__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>BRA</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>6</b>
+                                </div>
+
+
+                                <br>
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/182790941/photo/swiss-flag.jpg?b=1&s=170667a&w=0&k=20&c=H80h9tPgKESmn25QgYqOB3aRBRdwBfqgQmmStV__Gt0="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>SWI</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>6</b>
+                                </div>
+                            </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/16/13/17/cameroon-35964__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>CAM</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2013/07/13/14/17/serbia-162415__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>SER</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>1</b>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--standings ROW ends-->
+
+
+            <!--standings col-->
+            <div class="col-sm-6 mb-5">
+                <div class="card shadow border: none;">
+                    <div class="card-header bg-primary" style="text-align: center;">
+                        <b>Group_H</b>
+                    </div>
+
+                    <div class="row m-0 bg-secondary">
+                        <div class="col-sm-4" style="text-align: center;">
+                            team
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            W
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            L
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            D
+                        </div>
+
+                        <div class="col-sm-2" style="text-align: center;">
+                            Pts
+                        </div>
+                    </div>
+                    <!--Ul Teams-->
+                    <ul>
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center; margin-bottom: 20px">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/479234296/photo/portuguese-flag.jpg?b=1&s=170667a&w=0&k=20&c=KzSTxP831DSqlMSmiZSTBwGATjR2a0Xx1vJNK-NEwqM="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>POR</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>6</b>
+                                </div>
+
+
+                                <br>
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2012/04/13/12/39/south-32234__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>SKO</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+                            </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://media.istockphoto.com/id/652754092/photo/national-flag-of-uruguay.jpg?b=1&s=170667a&w=0&k=20&c=Mf0RUbsxKemyQDhWOzU8SwK_y9NBqGLpulLglBumXJI="
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>URU</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>4</b>
+                                </div>
+
+
+                        <li class="list-group-item">
+                            <div class="row" style="--bs-gutter-x: 1.5rem; --bs-gutter-y: 0.6rem;">
+                                <div class="col-sm-4 d-flex justify-content-center align-itmes-center"
+                                    style="text-align: center;">
+                                    <span class="flag">
+                                        <img width="50px" class="rounded-circle"
+                                            src="https://cdn.pixabay.com/photo/2013/07/13/14/15/ghana-162302__340.png"
+                                            alt="">
+                                    </span>
+                                    <h5 style="margin: auto 4px;"><b>GHA</b></h5>
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    1
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    2
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    0
+                                </div>
+
+                                <div class="col-sm-2" style="text-align: center;">
+                                    <b>3</b>
+                                </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--standings ROW ends-->
+
+            <img src="world-cup.png" alt="pic">
+            <br>
+            <br>
+
+            <!-- MATCHES -->
+            <div>
+
+                <!-- TITLE ROW -->
+                <div class="row" style="direction: rtl;">
+                    <h1>
+                        <b>
+                            مباريات دور الربع النهائي
+                        </b>
+                    </h1>
+                    <hr>
+                </div>
+                <!--// TITLE ROW //-->
+
+
+                <!-- MATCHES ROW -->
+                <div class="row" id="matches">
+
+                    <!-- MATCH COL -->
+                    <div class="col-sm-12">
+
+                        <div class="card shadow rounded-pill" style="overflow: hidden;">
+                            <div class="card-body p-0">
+                                <div class="row" style="height: 120px;">
+
+                                    <!-- FIRST TEAM COL -->
+                                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                                        style="border-right: solid 5px #5b0d25; ">
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <!-- IMAGE AND TEAM NAME DIV -->
+                                            <div>
+                                                <div class="flag">
+                                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                                        src="https://cdn.pixabay.com/photo/2014/04/02/11/12/brazil-305531__340.png"
+                                                        alt="">
+                                                </div>
+
+                                                <h5 style="margin: auto 4px">
+                                                    <b>BRA</b>
+                                                </h5>
+                                            </div>
+                                            <!--// IMAGE AND TEAM NAME DIV// -->
+                                        </div>
+                                    </div>
+                                    <!--// FIRST TEAM COL //-->
+
+                                    <!-- MATCH INFO COL -->
+                                    <div class="col-sm-6" style="text-align: center;">
+                                        <h6>Quarter final</h6>
+                                        <h1>X</h1>
+                                        <h6>Fri, Dec 9</h6>
+                                    </div>
+                                    <!--// MATCH INFO COL //-->
+
+
+                                    <!-- SECOND TEAM COL -->
+                                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                                        style="border-left: solid 5px #5b0d25; ">
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <!-- IMAGE AND TEAM NAME DIV -->
+                                            <div>
+                                                <div class="flag">
+                                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                                        src="https://media.istockphoto.com/id/455219859/photo/croatian-flag.jpg?b=1&s=170667a&w=0&k=20&c=y_sPPDuM1OLHVT9SRDIOccK_5RnkvIY7U3R2HVEv-yA="
+                                                        alt="">
+                                                </div>
+
+                                                <h5 style="margin: auto 4px">
+                                                    <b>CRO</b>
+                                                </h5>
+                                            </div>
+                                            <!--// IMAGE AND TEAM NAME DIV// -->
+                                        </div>
+                                    </div>
+                                    <!--// SECOND TEAM COL //-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// MATCH COL //-->
+
+
+                    <div class="col-sm-12">
+
+                        <div class="card shadow rounded-pill" style="overflow: hidden;">
+                            <div class="card-body p-0">
+                                <div class="row" style="height: 120px;">
+
+                                    <!-- FIRST TEAM COL -->
+                                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                                        style="border-right: solid 5px #5b0d25; ">
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <!-- IMAGE AND TEAM NAME DIV -->
+                                            <div>
+                                                <div class="flag">
+                                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                                        src="https://media.istockphoto.com/id/1349799710/photo/flag-of-netherlands.jpg?b=1&s=170667a&w=0&k=20&c=ZBTuF_THBMHdZe5AWN-LTelxiRyx6HpqKguXpSXGH_A="
+                                                        alt="">
+                                                </div>
+
+                                                <h5 style="margin: auto 4px">
+                                                    <b>NET</b>
+                                                </h5>
+                                            </div>
+                                            <!--// IMAGE AND TEAM NAME DIV// -->
+                                        </div>
+                                    </div>
+                                    <!--// FIRST TEAM COL //-->
+
+                                    <!-- MATCH INFO COL -->
+                                    <div class="col-sm-6" style="text-align: center;">
+                                        <h6>Quarter final</h6>
+                                        <h1>X</h1>
+                                        <h6>Fri, Dec 9</h6>
+                                    </div>
+                                    <!--// MATCH INFO COL //-->
+
+
+                                    <!-- SECOND TEAM COL -->
+                                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                                        style="border-left: solid 5px #5b0d25; ">
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <!-- IMAGE AND TEAM NAME DIV -->
+                                            <div>
+                                                <div class="flag">
+                                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                                        src="https://media.istockphoto.com/id/610426496/photo/flag-of-argentina.jpg?b=1&s=170667a&w=0&k=20&c=TQbZqCvjsS959SjPNajj3iucqlH0uTwWXUGQLghIe7k="
+                                                        alt="">
+                                                </div>
+
+                                                <h5 style="margin: auto 4px">
+                                                    <b>ARG</b>
+                                                </h5>
+                                            </div>
+                                            <!--// IMAGE AND TEAM NAME DIV// -->
+                                        </div>
+                                    </div>
+                                    <!--// SECOND TEAM COL //-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// MATCH COL //-->
+
+                    <div class="col-sm-12">
+
+                        <div class="card shadow rounded-pill" style="overflow: hidden;">
+                            <div class="card-body p-0">
+                                <div class="row" style="height: 120px;">
+
+                                    <!-- FIRST TEAM COL -->
+                                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                                        style="border-right: solid 5px #5b0d25; ">
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <!-- IMAGE AND TEAM NAME DIV -->
+                                            <div>
+                                                <div class="flag">
+                                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                                        src="https://cdn.pixabay.com/photo/2013/07/13/14/16/morocco-162365__340.png"
+                                                        alt="">
+                                                </div>
+
+                                                <h5 style="margin: auto 4px">
+                                                    <b>MAR</b>
+                                                </h5>
+                                            </div>
+                                            <!--// IMAGE AND TEAM NAME DIV// -->
+                                        </div>
+                                    </div>
+                                    <!--// FIRST TEAM COL //-->
+
+                                    <!-- MATCH INFO COL -->
+                                    <div class="col-sm-6" style="text-align: center;">
+                                        <h6>Quarter final</h6>
+                                        <h1>X</h1>
+                                        <h6>Sat, Dec 10</h6>
+                                    </div>
+                                    <!--// MATCH INFO COL //-->
+
+
+                                    <!-- SECOND TEAM COL -->
+                                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                                        style="border-left: solid 5px #5b0d25; ">
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <!-- IMAGE AND TEAM NAME DIV -->
+                                            <div>
+                                                <div class="flag">
+                                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                                        src="https://media.istockphoto.com/id/479234296/photo/portuguese-flag.jpg?b=1&s=170667a&w=0&k=20&c=KzSTxP831DSqlMSmiZSTBwGATjR2a0Xx1vJNK-NEwqM="
+                                                        alt="">
+                                                </div>
+
+                                                <h5 style="margin: auto 4px">
+                                                    <b>POR</b>
+                                                </h5>
+                                            </div>
+                                            <!--// IMAGE AND TEAM NAME DIV// -->
+                                        </div>
+                                    </div>
+                                    <!--// SECOND TEAM COL //-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// MATCH COL //-->
+
+
+                    <div class="col-sm-12">
+
+                        <div class="card shadow rounded-pill" style="overflow: hidden;">
+                            <div class="card-body p-0">
+                                <div class="row" style="height: 120px;">
+
+                                    <!-- FIRST TEAM COL -->
+                                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                                        style="border-right: solid 5px #5b0d25; ">
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <!-- IMAGE AND TEAM NAME DIV -->
+                                            <div>
+                                                <div class="flag">
+                                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                                        src="https://cdn.pixabay.com/photo/2012/04/11/15/19/france-28463__340.png"
+                                                        alt="">
+                                                </div>
+
+                                                <h5 style="margin: auto 4px">
+                                                    <b>FRA</b>
+                                                </h5>
+                                            </div>
+                                            <!--// IMAGE AND TEAM NAME DIV// -->
+                                        </div>
+                                    </div>
+                                    <!--// FIRST TEAM COL //-->
+
+                                    <!-- MATCH INFO COL -->
+                                    <div class="col-sm-6" style="text-align: center;">
+                                        <h6>Quarter final</h6>
+                                        <h1>X</h1>
+                                        <h6>Sat, Dec 10</h6>
+                                    </div>
+                                    <!--// MATCH INFO COL //-->
+
+
+                                    <!-- SECOND TEAM COL -->
+                                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                                        style="border-left: solid 5px #5b0d25; ">
+
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <!-- IMAGE AND TEAM NAME DIV -->
+                                            <div>
+                                                <div class="flag">
+                                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                                        src="https://cdn.pixabay.com/photo/2015/11/12/16/23/flag-1040592__340.png"
+                                                        alt="">
+                                                </div>
+
+                                                <h5 style="margin: auto 4px">
+                                                    <b>ENG</b>
+                                                </h5>
+                                            </div>
+                                            <!--// IMAGE AND TEAM NAME DIV// -->
+                                        </div>
+                                    </div>
+                                    <!--// SECOND TEAM COL //-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--// MATCH COL //-->
+                </div>
+                <!--// MATCHES ROW //-->
+            </div>
+            <!--// MATCHES //-->
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+    <!--Content Ends Here-->
+    <br><br>
+    <center>
+        <img src="https://pbs.twimg.com/media/FjpTK66VIAMZyNF?format=jpg&name=small" alt="semi finals">
+    </center>
+    <br>
+    <div class="row" style="direction: rtl;">
+        <h1>
+            <b>
+            النهائي
+            </b>
+        </h1>
+        <hr>
+    </div>
+    <div class="col-sm-12">
+
+        <div class="card shadow rounded-pill" style="overflow: hidden;">
+            <div class="card-body p-0">
+                <div class="row" style="height: 120px;">
+
+                    <!-- FIRST TEAM COL -->
+                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                        style="border-right: solid 5px #5b0d25; ">
+
+                        <div class="d-flex align-items-center justify-content-center">
+                            <!-- IMAGE AND TEAM NAME DIV -->
+                            <div>
+                                <div class="flag">
+                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                        src="https://cdn.pixabay.com/photo/2012/04/11/15/19/france-28463__340.png"
+                                        alt="">
+                                </div>
+
+                                <h5 style="margin: auto 4px">
+                                    <b>FRA</b>
+                                </h5>
+                            </div>
+                            <!--// IMAGE AND TEAM NAME DIV// -->
+                        </div>
+                    </div>
+                    <!--// FIRST TEAM COL //-->
+
+                    <!-- MATCH INFO COL -->
+                    <div class="col-sm-6" style="text-align: center;">
+                        <h1>3 - 3</h1>
+                <h4>Penalties: 2-4</h4>
+                    </div>
+                    <!--// MATCH INFO COL //-->
+
+
+                    <!-- SECOND TEAM COL -->
+                    <div class="col-sm-3 bg-primary d-flex flex-direction-column justify-content-center align-itmes-center"
+                        style="border-left: solid 5px #5b0d25; ">
+
+                        <div class="d-flex align-items-center justify-content-center">
+                            <!-- IMAGE AND TEAM NAME DIV -->
+                            <div>
+                                <div class="flag">
+                                    <img style="width: 40px; height: 40px" class="rounded-circle"
+                                        src="https://media.istockphoto.com/id/610426496/photo/flag-of-argentina.jpg?b=1&s=170667a&w=0&k=20&c=TQbZqCvjsS959SjPNajj3iucqlH0uTwWXUGQLghIe7k="
+                                        alt="">
+                                </div>
+
+                                <h5 style="margin: auto 4px">
+                                    <b>ARG</b>
+                                </h5>
+                            </div>
+                            <!--// IMAGE AND TEAM NAME DIV// -->
+                        </div>
+                    </div>
+                    <!--// SECOND TEAM COL //-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--// MATCH COL //-->
+</div>
+<!--// MATCHES ROW //-->
+</div>
+    <br><br>
+    <center>
+        <footer>
+            <ul class="down">
+                <li><a target="_blank"
+                        href="https://www.google.com/search?client=opera-gx&q=fifa+world+cup+2022&sourceid=opera&ie=UTF-8&oe=UTF-8#sie=lg;/m/0fp_8fm;2;/m/030q7;mt;fp;1;;;"><img
+                            width="45px" height="45px" src="https://cdn-icons-png.flaticon.com/128/4494/4494475.png"
+                            alt="fb"></a></li>
+                <li><a target="_blank"
+                        href="https://www.google.com/search?client=opera-gx&q=fifa+world+cup+2022&sourceid=opera&ie=UTF-8&oe=UTF-8#sie=lg;/m/0fp_8fm;2;/m/030q7;mt;fp;1;;;"><img
+                            width="45px" height="45px" src="https://cdn-icons-png.flaticon.com/128/2111/2111463.png"
+                            alt="fb"></a></li>
+                <li><a target="_blank"
+                        href="https://www.google.com/search?client=opera-gx&q=fifa+world+cup+2022&sourceid=opera&ie=UTF-8&oe=UTF-8#sie=lg;/m/0fp_8fm;2;/m/030q7;mt;fp;1;;;"><img
+                            width="45px" height="45px" src="https://cdn-icons-png.flaticon.com/128/733/733585.png"
+                            alt="fb"></a></li>
+                <li><a target="_parent"
+                        href="https://www.google.com/search?client=opera-gx&q=fifa+world+cup+2022&sourceid=opera&ie=UTF-8&oe=UTF-8#sie=lg;/m/0fp_8fm;2;/m/030q7;mt;fp;1;;;"><img
+                            width="45px" height="45px" src="https://cdn-icons-png.flaticon.com/128/733/733579.png"
+                            alt="fb"></a></li>
+            </ul>
+        </footer>
+    </center>
+
+</body>
+
+</html>
